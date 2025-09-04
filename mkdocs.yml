@@ -5,11 +5,11 @@ repo_url: https://github.com/business-news/data-style-guide
 
 theme:
   name: material
-  custom_dir: overrides            # enables the footer override
+  # custom_dir: overrides      # ← keep removed/commented out
   logo: assets/logo.svg
   favicon: assets/favicon.svg
   palette:
-    - scheme: default              # light only; no dark mode toggle
+    - scheme: default
       primary: custom
       accent: custom
   features:
@@ -18,7 +18,7 @@ theme:
     - toc.integrate
     - search.suggest
     - content.code.copy
-    - navigation.footer            # show footer area
+    - navigation.footer
 
 extra_css:
   - stylesheets/extra.css
@@ -28,6 +28,14 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/business-news/data-style-guide
       name: Source on GitHub
+  footer: |
+    <div class="bn-footer-extra">
+      <span>© {{ now().year }} Business News</span>
+      <span class="bn-sep">•</span>
+      <a href="https://www.businessnews.com.au" target="_blank" rel="noopener">businessnews.com.au</a>
+      <span class="bn-sep">•</span>
+      <a href="mailto:general@businessnews.com.au">general@businessnews.com.au</a>
+    </div>
 
 markdown_extensions:
   - admonition
