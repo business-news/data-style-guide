@@ -1,98 +1,96 @@
-/* Import BN digital fonts (closest available: Playfair Display & Barlow) */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
+/* ——— Brand colours & fonts ——— */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap');
 
-/* Default (light) scheme */
+:root {
+  --bn-blue: #0081c6;
+  /* BN Blue */
+  --bn-dark: #011e45;
+  /* BN Dark Blue */
+  --bn-gold: #e8bc07;
+  /* Gold */
+}
+
 :root,
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #0081c6;
-  /* BN Blue */
+  --md-primary-fg-color: var(--bn-blue);
   --md-primary-fg-color--light: #339AD1;
-  /* lighter BN Blue */
-  --md-primary-fg-color--dark: #011e45;
-  /* Dark Blue */
-  --md-accent-fg-color: #e8bc07;
-  /* Gold */
+  --md-primary-fg-color--dark: var(--bn-dark);
+  --md-accent-fg-color: var(--bn-gold);
 
   --md-text-font: "Barlow", Arial, sans-serif;
   --md-code-font: ui-monospace, Menlo, Consolas, monospace;
 }
 
-/* Dark scheme */
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #339AD1;
-  /* brighter BN Blue for contrast */
-  --md-accent-fg-color: #e8bc07;
-  /* Gold */
-}
-
-/* Headings use Playfair for BN look */
+/* Headings use Playfair; colour them BN Dark Blue */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
   font-family: "Playfair Display", Georgia, serif;
+  color: var(--bn-dark);
 }
 
-/* Header title in Barlow (corporate sans) */
-.md-header__title {
-  font-family: "Barlow", Arial, sans-serif;
+/* ——— Header & Logo ——— */
+/* White header so BN Blue logo stands out */
+.md-header {
+  background-color: #fff;
+  color: var(--bn-dark);
 }
 
-/* Optional tweaks */
-.md-nav__title,
-.md-typeset table th {
-  font-weight: 600;
-}
-
-.md-header__button.md-logo img {
-  height: 32px;
-  /* adjust to taste */
-  width: auto;
-}
-
-/* docs/stylesheets/extra.css */
-.md-header__button.md-logo img {
-  height: 32px;
-  width: auto;
-}
-
-/* Ensure the header shows the horizontal logo at a consistent size */
+/* Make the horizontal logo 2x bigger (was ~32px) */
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 32px;
+  height: 64px;
+  /* doubled */
   width: auto;
 }
 
-/* If the favicon sneaks in, hide it in the header but keep it for the browser tab */
-.md-header__button.md-logo img[src*="favicon"],
-.md-header__button.md-logo svg[id*="favicon"],
-.md-header__button.md-logo svg[aria-label*="favicon"] {
+/* Reduce logo size on small screens to avoid crowding */
+@media (max-width: 768px) {
+
+  .md-header__button.md-logo img,
+  .md-header__button.md-logo svg {
+    height: 48px;
+  }
+}
+
+/* Hide the GitHub button in the header; we'll show it in the footer instead */
+.md-header__source {
   display: none !important;
 }
 
-/* Make the top header white so the BN Blue logo shows clearly */
-.md-header {
-  background-color: #ffffff;
-  color: #011e45;
-  /* fallback text colour */
-}
-
-/* Style the nav bar (tabs) below header in BN Dark Blue */
+/* ——— Tabs (nav bar) ——— */
 .md-tabs {
-  background-color: #011e45;
+  background-color: var(--bn-dark);
 }
 
-/* Nav tab text colours */
+/* Tabs use white text and bold weight */
 .md-tabs__link {
-  color: #ffffff;
-  /* white text on dark blue */
+  color: #fff;
+  font-weight: 700;
+  /* bold tabs */
 }
 
-.md-tabs__link--active {
-  color: #e8bc07;
-  /* Gold highlight for active tab */
-}
-
-/* Optional: adjust hover states */
+/* Active & hover use BN Blue highlight */
+.md-tabs__link--active,
 .md-tabs__link:hover {
-  color: #e8bc07;
+  color: var(--bn-blue);
+}
+
+/* ——— Footer ——— */
+.md-footer {
+  background: var(--bn-dark);
+  color: #fff;
+}
+
+.md-footer a {
+  color: #fff;
+}
+
+.md-footer a:hover {
+  color: var(--bn-blue);
+}
+
+/* Optional: make footer titles a touch brighter */
+.md-footer__title {
+  color: #fff;
 }

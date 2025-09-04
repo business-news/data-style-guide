@@ -1,40 +1,40 @@
-site_name: Business News Data & Graphics Style Guide
+site_name: Data Style Guide
 site_description: Standards for tables, charts, maps and data formatting for Business News (print & online)
 site_url: https://business-news.github.io/data-style-guide
 repo_url: https://github.com/business-news/data-style-guide
+
 theme:
   name: material
-  logo: assets/logo.svg?v=2
-  favicon: assets/favicon.svg?v=2
-
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   palette:
-    - scheme: default
+    - scheme: default            # light only; no dark mode / no toggle
       primary: custom
       accent: custom
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.top
     - toc.integrate
     - search.suggest
     - content.code.copy
+    - navigation.footer          # show footer area (for social icon)
 
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/business-news/data-style-guide
+      name: Source on GitHub
+
 markdown_extensions:
   - admonition
   - toc:
       permalink: true
   - footnotes
   - attr_list
+
 nav:
   - Home: index.md
   - Colour Palettes: colour-palettes.md
