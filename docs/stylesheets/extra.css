@@ -1,95 +1,44 @@
-/* --- Business News brand (web-safe fallbacks) --- */
-:root {
-  --bn-black: #000000;
-  --bn-dark-blue: #003D99;
-  --bn-blue: #1987FF;
-  --bn-purple: #7300E6;
-  --bn-green: #00CC52;
-  --bn-red: #FF0019;
-  --bn-gold: #E6BC00;
+/* Import BN digital fonts (closest available: Playfair Display & Barlow) */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
 
-  /* Neutrals */
-  --bn-grey-90: #111;
-  --bn-grey-70: #4a4a4a;
-  --bn-grey-40: #9aa0a6;
-  --bn-grey-20: #e5e7ea;
-  --bn-grey-10: #f4f6f8;
+/* Default (light) scheme */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0081c6;
+  /* BN Blue */
+  --md-primary-fg-color--light: #339AD1;
+  /* lighter BN Blue */
+  --md-primary-fg-color--dark: #011e45;
+  /* Dark Blue */
+  --md-accent-fg-color: #e8bc07;
+  /* Gold */
+
+  --md-text-font: "Barlow", Arial, sans-serif;
+  --md-code-font: ui-monospace, Menlo, Consolas, monospace;
 }
 
-/* Typography: use licensed faces if available; otherwise high-quality fallbacks */
-:root {
-  --bn-sans: "FF Meta Pro", "Meta Pro", "Inter", "Segoe UI", Roboto, Helvetica, Arial, system-ui, sans-serif;
-  --bn-serif: "FF Meta Serif", "Meta Serif Pro", Georgia, "Times New Roman", serif;
+/* Dark scheme */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #339AD1;
+  /* brighter BN Blue for contrast */
+  --md-accent-fg-color: #e8bc07;
+  /* Gold */
 }
 
-:root {
-  --md-text-font: var(--bn-serif);
-  --md-code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
+/* Headings use Playfair for BN look */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
-  font-family: var(--bn-sans);
-  letter-spacing: 0.2px;
+  font-family: "Playfair Display", Georgia, serif;
 }
 
-.md-typeset {
-  font-family: var(--bn-serif);
-}
-
-.md-typeset table th {
-  background: var(--bn-grey-10);
-}
-
-.md-typeset .admonition {
-  border-left: 4px solid var(--bn-dark-blue);
-}
-
-/* Swatch cards */
-.swatches {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-}
-
-.swatch {
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, .06);
-}
-
-.swatch__chip {
-  height: 70px;
-}
-
-.swatch__meta {
-  padding: 10px 12px;
-  background: white;
-  font-size: .85rem;
-}
-
-:root {
-  /* Business News brand overrides */
-  --md-primary-fg-color: #1987FF;
-  /* BN Blue */
-  --md-primary-fg-color--light: #4F9FFF;
-  --md-primary-fg-color--dark: #003D99;
-  --md-accent-fg-color: #E6BC00;
-  /* Gold */
-
-  /* Typography overrides */
-  --md-text-font: "FF Meta Serif", "Meta Serif Pro", Georgia, serif;
-  --md-code-font: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-}
-
-/* Optional: tweak header font */
+/* Header title in Barlow (corporate sans) */
 .md-header__title {
-  font-family: "FF Meta Pro", "Meta Pro", Helvetica, Arial, sans-serif;
+  font-family: "Barlow", Arial, sans-serif;
 }
 
-/* TEMP TEST */
-.md-header {
-  border-bottom: 4px solid hotpink !important;
+/* Optional tweaks */
+.md-nav__title,
+.md-typeset table th {
+  font-weight: 600;
 }
