@@ -1,33 +1,42 @@
-name: Deploy MkDocs site
+name: Build and Deploy (MkDocs → GitHub Pages)
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-
-      - name: Install MkDocs Material
-        run: pip install mkdocs-material
-
+      - run: pip install mkdocs-material
       - name: Build site
-        run: mkdocs build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        run: mkdocs build --strict
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          force_orphan: true
+          path: ./site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -4,12 +4,21 @@ site_url: https://business-news.github.io/data-style-guide
 repo_url: https://github.com/business-news/data-style-guide
 theme:
   name: material
-  logo: assets/logo.png
-  favicon: assets/favicon.png
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   palette:
     - scheme: default
-      primary: indigo
-      accent: amber
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.top
