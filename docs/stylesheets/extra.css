@@ -54,3 +54,17 @@
   height: 32px;
   width: auto;
 }
+
+/* Ensure the header shows the horizontal logo at a consistent size */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 32px;
+  width: auto;
+}
+
+/* If the favicon sneaks in, hide it in the header but keep it for the browser tab */
+.md-header__button.md-logo img[src*="favicon"],
+.md-header__button.md-logo svg[id*="favicon"],
+.md-header__button.md-logo svg[aria-label*="favicon"] {
+  display: none !important;
+}
