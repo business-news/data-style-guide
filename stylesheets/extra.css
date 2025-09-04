@@ -27,14 +27,64 @@
   --md-code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.md-typeset h1, .md-typeset h2, .md-typeset h3 { font-family: var(--bn-sans); letter-spacing: 0.2px; }
-.md-typeset { font-family: var(--bn-serif); }
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: var(--bn-sans);
+  letter-spacing: 0.2px;
+}
 
-.md-typeset table th { background: var(--bn-grey-10); }
-.md-typeset .admonition { border-left: 4px solid var(--bn-dark-blue); }
+.md-typeset {
+  font-family: var(--bn-serif);
+}
+
+.md-typeset table th {
+  background: var(--bn-grey-10);
+}
+
+.md-typeset .admonition {
+  border-left: 4px solid var(--bn-dark-blue);
+}
 
 /* Swatch cards */
-.swatches { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 12px; }
-.swatch { border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.08); overflow: hidden; border: 1px solid rgba(0,0,0,.06); }
-.swatch__chip { height: 70px; }
-.swatch__meta { padding: 10px 12px; background: white; font-size: .85rem; }
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.swatch {
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .06);
+}
+
+.swatch__chip {
+  height: 70px;
+}
+
+.swatch__meta {
+  padding: 10px 12px;
+  background: white;
+  font-size: .85rem;
+}
+
+:root {
+  /* Business News brand overrides */
+  --md-primary-fg-color: #1987FF;
+  /* BN Blue */
+  --md-primary-fg-color--light: #4F9FFF;
+  --md-primary-fg-color--dark: #003D99;
+  --md-accent-fg-color: #E6BC00;
+  /* Gold */
+
+  /* Typography overrides */
+  --md-text-font: "FF Meta Serif", "Meta Serif Pro", Georgia, serif;
+  --md-code-font: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Optional: tweak header font */
+.md-header__title {
+  font-family: "FF Meta Pro", "Meta Pro", Helvetica, Arial, sans-serif;
+}
