@@ -5,10 +5,11 @@ repo_url: https://github.com/business-news/data-style-guide
 
 theme:
   name: material
+  custom_dir: overrides            # enables the footer override
   logo: assets/logo.svg
   favicon: assets/favicon.svg
   palette:
-    - scheme: default            # light only; no dark mode / no toggle
+    - scheme: default              # light only; no dark mode toggle
       primary: custom
       accent: custom
   features:
@@ -17,7 +18,7 @@ theme:
     - toc.integrate
     - search.suggest
     - content.code.copy
-    - navigation.footer          # show footer area (for social icon)
+    - navigation.footer            # show footer area
 
 extra_css:
   - stylesheets/extra.css
