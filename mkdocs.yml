@@ -4,8 +4,9 @@ site_url: https://business-news.github.io/data-style-guide
 repo_url: https://github.com/business-news/data-style-guide
 theme:
   name: material
-  logo: assets/logo.svg       # place your official BN horizontal logo here
-  favicon: assets/favicon.svg # place your official BN favicon here
+  logo: assets/logo.svg       # full BN horizontal logo for the header
+  favicon: assets/favicon.svg # small square version for the tab icon
+
   palette:
     - scheme: default
       primary: custom
