@@ -1,0 +1,40 @@
+/* --- Business News brand (web-safe fallbacks) --- */
+:root {
+  --bn-black: #000000;
+  --bn-dark-blue: #003D99;
+  --bn-blue: #1987FF;
+  --bn-purple: #7300E6;
+  --bn-green: #00CC52;
+  --bn-red: #FF0019;
+  --bn-gold: #E6BC00;
+
+  /* Neutrals */
+  --bn-grey-90: #111;
+  --bn-grey-70: #4a4a4a;
+  --bn-grey-40: #9aa0a6;
+  --bn-grey-20: #e5e7ea;
+  --bn-grey-10: #f4f6f8;
+}
+
+/* Typography: use licensed faces if available; otherwise high-quality fallbacks */
+:root {
+  --bn-sans: "FF Meta Pro", "Meta Pro", "Inter", "Segoe UI", Roboto, Helvetica, Arial, system-ui, sans-serif;
+  --bn-serif: "FF Meta Serif", "Meta Serif Pro", Georgia, "Times New Roman", serif;
+}
+
+:root {
+  --md-text-font: var(--bn-serif);
+  --md-code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { font-family: var(--bn-sans); letter-spacing: 0.2px; }
+.md-typeset { font-family: var(--bn-serif); }
+
+.md-typeset table th { background: var(--bn-grey-10); }
+.md-typeset .admonition { border-left: 4px solid var(--bn-dark-blue); }
+
+/* Swatch cards */
+.swatches { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 12px; }
+.swatch { border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.08); overflow: hidden; border: 1px solid rgba(0,0,0,.06); }
+.swatch__chip { height: 70px; }
+.swatch__meta { padding: 10px 12px; background: white; font-size: .85rem; }
