@@ -3,7 +3,7 @@
 We standardise three palette types — **categorical**, **sequential**, and **diverging** — with Business News brand colours.
 
 ## Brand colours (print CMYK → web HEX)
-
+![Business News web colour palette](assets/web-colours.svg)
 <div class="swatches">
   <div class="swatch">
     <div class="swatch__chip" style="background:#1987FF"></div>
