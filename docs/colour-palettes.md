@@ -6,30 +6,38 @@ We standardise three palette types — **categorical**, **sequential**, and **di
 ![Business News web colour palette](assets/web-colours.svg)
 <div class="swatches">
   <div class="swatch">
-    <div class="swatch__chip" style="background:#1987FF"></div>
-    <div class="swatch__meta"><strong>BN Blue</strong><br>CMYK 90/47/0/0 → <code>#1987FF</code></div>
+    <div class="swatch__chip" style="background:#0081C6"></div>
+    <div class="swatch__meta"><strong>BN Blue</strong><br><code>#0081C6</code></div>
   </div>
   <div class="swatch">
-    <div class="swatch__chip" style="background:#003D99"></div>
-    <div class="swatch__meta"><strong>Dark Blue</strong><br>CMYK 100/60/0/40 → <code>#003D99</code></div>
+    <div class="swatch__chip" style="background:#011E45"></div>
+    <div class="swatch__meta"><strong>BN Dark Blue</strong><br><code>#011E45</code></div>
   </div>
   <div class="swatch">
-    <div class="swatch__chip" style="background:#00CC52"></div>
-    <div class="swatch__meta"><strong>Green</strong><br>CMYK 100/0/60/20 → <code>#00CC52</code></div>
+    <div class="swatch__chip" style="background:#E8BC07"></div>
+    <div class="swatch__meta"><strong>BN Gold</strong><br><code>#E8BC07</code></div>
   </div>
   <div class="swatch">
-    <div class="swatch__chip" style="background:#FF0019"></div>
-    <div class="swatch__meta"><strong>Red</strong><br>CMYK 0/100/90/0 → <code>#FF0019</code></div>
+    <div class="swatch__chip" style="background:#601663"></div>
+    <div class="swatch__meta"><strong>Purple</strong><br><code>#601663</code></div>
   </div>
   <div class="swatch">
-    <div class="swatch__chip" style="background:#E6BC00"></div>
-    <div class="swatch__meta"><strong>Gold</strong><br>CMYK 0/18/100/10 → <code>#E6BC00</code></div>
+    <div class="swatch__chip" style="background:#025945"></div>
+    <div class="swatch__meta"><strong>Green</strong><br><code>#025945</code></div>
   </div>
   <div class="swatch">
-    <div class="swatch__chip" style="background:#7300E6"></div>
-    <div class="swatch__meta"><strong>Purple</strong><br>CMYK 50/100/0/10 → <code>#7300E6</code></div>
+    <div class="swatch__chip" style="background:#E33238"></div>
+    <div class="swatch__meta"><strong>Red</strong><br><code>#E33238</code></div>
   </div>
 </div>
+
+<!-- Show your master palette and make it downloadable -->
+<p></p>
+<a href="assets/web-colours.svg" download>
+  <img src="assets/web-colours.svg" alt="Business News web colour palette" width="600">
+</a>
+<p><em>Click the palette to download the SVG file</em></p>
+
 
 !!! note
     CMYK values come from the publication style guide. Web HEX approximations are calculated from CMYK. If brand provides official RGB/HEX, prefer those.

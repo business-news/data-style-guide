@@ -2,20 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap');
 
 :root {
-  --bn-blue: #0081c6;
-  /* BN Blue */
-  --bn-dark: #011e45;
-  /* BN Dark Blue */
-  --bn-gold: #e8bc07;
-  /* Gold */
+  /* Business News brand – exact colours from web-colours.svg */
+  --bn-blue: #0081C6;
+  --bn-dark: #011E45;
+  --bn-gold: #E8BC07;
+  --bn-purple: #601663;
+  --bn-green: #025945;
+  --bn-red: #E33238;
+  --bn-black: #000000;
+  --bn-white: #FFFFFF;
+
+  /* Optional highlight (keep if you still like it; otherwise pick a light tint from your SVG) */
   --bn-highlight: #CCE6F4;
-  /* Requested nav highlight */
 }
 
+/* Map brand colours to Material variables */
 :root,
 [data-md-color-scheme="default"] {
   --md-primary-fg-color: var(--bn-blue);
   --md-primary-fg-color--light: #339AD1;
+  /* keep or adjust */
   --md-primary-fg-color--dark: var(--bn-dark);
   --md-accent-fg-color: var(--bn-gold);
 
